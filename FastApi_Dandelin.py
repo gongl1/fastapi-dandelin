@@ -91,8 +91,8 @@ from pyngrok import ngrok
 import uvicorn
 
 
-# ngrok.set_auth_token("2iu15NKJ9dV750sK2gVGciIG8rF_3JTn7dcWzN6c277V77RoU")
-ngrok.set_auth_token("28QuBbclrQ7cCyOfxGpBokBbnEF_6R6iV6xHdqkiDwPoqTv2u")
+# ngrok.set_auth_token("os.getenv("NGROK_AUTH_TOKEN")")
+ngrok.set_auth_token("os.getenv("NGROK_AUTH_TOKEN")")
 ngrok_tunnel = ngrok.connect(8000)
 print('Public URL:', ngrok_tunnel.public_url)
 nest_asyncio.apply()
